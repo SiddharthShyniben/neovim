@@ -9,17 +9,18 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup({function(use)
 	use 'wbthomason/packer.nvim'
 
-	-- ui
+	---ui [[
 	use 'folke/tokyonight.nvim'
 	use {
 		'startup-nvim/startup.nvim',
 		requires = {'nvim-lua/plenary.nvim'}
 	}
-
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = {'nvim-lua/plenary.nvim', 'kyazdani42/nvim-web-devicons'}
 	}
+	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	---ui ]]
 
 	if packer_bootstrap then
 		require('packer').sync()
