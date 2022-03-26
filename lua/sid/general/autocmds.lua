@@ -12,4 +12,6 @@ vim.cmd [[
 
 	autocmd FocusGained * checktime
 	autocmd TextYankPost * lua vim.highlight.on_yank()
+
+	autocmd User PackerComplete echo 'Packer finished.'
 ]]
