@@ -19,7 +19,11 @@ return require('packer').startup({function(use)
 		'nvim-telescope/telescope.nvim',
 		requires = {'nvim-lua/plenary.nvim', 'kyazdani42/nvim-web-devicons'}
 	}
-	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true}
+	}
 	---ui ]]
 
 	if packer_bootstrap then
