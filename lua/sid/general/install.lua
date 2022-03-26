@@ -6,7 +6,7 @@ end
 
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+return require('packer').startup({function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- ui
@@ -19,4 +19,8 @@ return require('packer').startup(function(use)
 	if packer_bootstrap then
 		require('packer').sync()
 	end
-end)
+end, config = {
+	display = {
+		non_interactive = true
+	}
+}})
