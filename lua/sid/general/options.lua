@@ -1,13 +1,10 @@
-local g = vim.g
-local cmd = vim.cmd
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
 
-g.do_filetype_lua = 1
-g.did_load_filetypes = 0
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 
-g.mapleader = ' '
-g.maplocalleader = ','
-
-local disabled_built_ins = {
+local disabledPlugins = {
 	'gzip',
 	'man',
 	'matchit',
@@ -17,11 +14,11 @@ local disabled_built_ins = {
 	'tar',
 	'zipPlugin',
 	'zip',
-	'netrwPlugin',
+	'netrwPlugin'
 }
 
-for i = 1, 10 do
-	g['loaded_' .. disabled_built_ins[i]] = 1
+for _, plugin in ipairs(disabledPlugins) do
+	g['loaded_' .. plugin] = 1
 end
 
 local function set(x)
