@@ -24,7 +24,26 @@ return require('packer').startup({function(use)
 		'nvim-lualine/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
+	use 'norcalli/nvim-colorizer.lua'
+	use 'beauwilliams/focus.nvim'
+	use 'nathom/filetype.nvim'
+	use 'lukas-reineke/indent-blankline.nvim'
+	use 'rcarriga/nvim-notify'
 	---ui ]]
+
+	---editing [[
+	use 'github/copilot.vim'
+
+	use 'tpope/vim-surround'
+	use 'tpope/vim-repeat'
+	use 'tpope/vim-fugitive'
+	use 'tpope/vim-speeddating'
+	use 'tpope/vim-rhubarb'
+	use 'tpope/vim-ragtag'
+	use 'tpope/vim-endwise'
+
+	use 'steelsojka/pears.nvim'
+	---editing ]]
 
 	if packer_bootstrap then
 		require('packer').sync()
