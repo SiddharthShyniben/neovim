@@ -18,7 +18,7 @@ local disabledPlugins = {
 }
 
 for _, plugin in ipairs(disabledPlugins) do
-	g['loaded_' .. plugin] = 1
+	vim.g['loaded_' .. plugin] = 1
 end
 
 local function set(x)
