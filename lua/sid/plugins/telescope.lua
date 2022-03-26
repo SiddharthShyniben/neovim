@@ -38,11 +38,17 @@ require'telescope'.setup {
 			preview_title = '~ File Preview ~ ',
 			prompt_title = '~ Find File ~',
 			results_title = '~ Results ~',
+		},
+		notify = { -- doesnt work idk TODO
+			preview_title = '~ Notifications ~',
+			prompt_title = '~ Filter notifications ~',
+			results_title = '~ Results ~',
 		}
 	},
 }
 
 require('telescope').load_extension 'fzf'
+require('telescope').load_extension 'notify'
 
 vim.cmd[[
 	command! EditConf lua require('telescope.builtin').find_files({cwd = '~/.config/nvim', prompt_title = '~ Configuration ~'})

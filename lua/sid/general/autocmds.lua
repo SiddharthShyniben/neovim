@@ -13,5 +13,5 @@ vim.cmd [[
 	autocmd FocusGained * checktime
 	autocmd TextYankPost * lua vim.highlight.on_yank()
 
-	autocmd User PackerComplete echo 'Packer finished.'
+	autocmd User PackerComplete lua require('notify')('packer: Compiled', 'success')
 ]]
